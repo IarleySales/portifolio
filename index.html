@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Portfólio - Iarley Gabriel</title>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+ <style>
+ /* Estilos Gerais */
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Inter', sans-serif;
+ scroll-behavior: smooth;
+ }
+
+
+ body {
+ background: #f9f9f9;
+ color: #333333;
+ padding: 4rem 2rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+
+
+ .container {
+ max-width: 900px;
+ width: 100%;
+ }
+
+
+ /* Menu de Navegação */
+ .menu {
+ background: linear-gradient(to right, #2563eb, #38bdf8);
+ color: #fff;
+ padding: 1rem 2rem;
+ border-radius: 0 0 10px 10px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+ margin-bottom: 2rem;
+ position: sticky; /* Adicionado */
+ top: 0; /* Adicionado */
+ z-index: 100;
+ width: 100%;
+ left: 0;
+ right: 0;
+}
+
+
+ .menu ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ display: flex;
+ justify-content: space-around;
+ width: 100%;
+}
+
+
+ .menu li {
+ margin: 0;
+}
+
+
+ .menu a {
+ color: #fff;
+ text-decoration: none;
+ font-weight: bold;
+ transition: color 0.3s ease;
+ display: block;
+ padding: 0.5rem 1rem;
+}
+
+
+ .menu a:hover {
+ color: #f0f9ff;
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+ /* Header */
+ header {
+ background: linear-gradient(to right, #2563eb, #38bdf8);
+ color: #ffffff;
+ padding: 3rem 2rem;
+ border-radius: 10px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ text-align: center;
+ margin-bottom: 3rem;
+ transition: all 0.3s ease;
+ }
+
+
+ header img {
+ width: 160px;
+ height: 160px;
+ border-radius: 50%;
+ object-fit: cover;
+ border: none; /* Removido */
+ margin-bottom: 1rem;
+ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+ }
+
+
+ header h1,
+ header p {
+ color: #ffffff;
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+ }
+
+
+ header h1 {
+ font-size: 2.8rem;
+ }
+
+
+ header p {
+ font-size: 1.2rem;
+ }
+
+
+ /* Seções */
+ section {
+ margin-bottom: 4rem;
+ }
+
+
+ h1,
+ h2,
+ h3 {
+ color: #2563eb;
+ }
+
+
+ h2 {
+ font-size: 2rem;
+ margin-bottom: 1rem;
+ }
+
+
+ p,
+ li {
+ color: #555555;
+ }
+
+
+ .sobre,
+ .contato,
+ .formacao,
+ .habilidades {
+ background-color: #f1f5f9;
+ padding: 1.5rem;
+ border-radius: 10px;
+ box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+ }
+
+
+ .sobre {
+ background-color: #e0f2fe;
+ border: 1px solid #bae6fd;
+ }
+
+
+ /* Projetos */
+ .projetos {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 1.5rem;
+ }
+
+
+ .card {
+ background-color: #f8fafc;
+ padding: 1.2rem;
+ border-radius: 10px;
+ border: 1px solid #e2e8f0;
+ transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+ }
+
+
+ .card:hover {
+ transform: translateY(-8px);
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+ background-color: #e0f2fe;
+ }
+
+
+ .card h3 {
+ color: #0ea5e9;
+ margin-bottom: 0.5rem;
+ }
+
+
+ .card p {
+ color: #334155;
+ }
+
+
+ /* Contato */
+ .contato-info {
+ margin-bottom: 0.5rem;
+ }
+
+
+ .contato-info a {
+ color: inherit;
+ text-decoration: none;
+ }
+
+
+ .contato-info a:hover {
+ text-decoration: underline;
+ }
+
+
+ /* Footer */
+ footer {
+ text-align: center;
+ margin-top: 3rem;
+ font-size: 0.9rem;
+ color: #94a3b8;
+ }
+
+
+ /* Listas */
+ ul {
+ padding-left: 1.5rem;
+ }
+
+
+ li {
+ margin-bottom: 0.5rem;
+ }
+
+
+ /* Media Queries */
+ @media (max-width: 768px) {
+ header h1 {
+ font-size: 2rem;
+ }
+
+
+ header p {
+ font-size: 1rem;
+ }
+
+
+ h2 {
+ font-size: 1.5rem;
+ }
+ }
+ </style>
+</head>
+<body>
+ <nav class="menu">
+ <ul>
+ <li><a href="#sobre">Sobre Mim</a></li>
+ <li><a href="#formacao">Formação</a></li>
+ <li><a href="#habilidades">Habilidades</a></li>
+ <li><a href="#projetos">Projetos</a></li>
+ <li><a href="#contato">Contato</a></li>
+ </ul>
+ </nav>
+
+
+ <div class="container">
+ <header>
+ <img src="https://media.licdn.com/dms/image/v2/D4D03AQGRYuxhlL6Oyg/profile-displayphoto-shrink_800_800/B4DZY7k.9IHIAc-/0/1744756273496?e=1755129600&v=beta&t=9N0N7NRVAO7Lt9FSR7YUdJUElNrBXs-3zkymkBsMUag" alt="Foto de Iarley Gabriel">
+ <h1>Iarley Gabriel</h1>
+ <p>Técnico de Informática</p>
+ </header>
+
+
+ <section id="sobre" class="sobre">
+ <h2>Sobre Mim</h2>
+ <p>Olá! Meu nome é Iarley Gabriel, tenho 16 anos e sou técnico de informática. Tenho interesse por hardware, redes e desenvolvimento de sistemas. Atualmente estou aprofundando meus estudos em front-end, lógica de programação e manutenção de computadores.</p>
+ </section>
+
+
+ <section id="formacao" class="formacao">
+ <h2>Formação</h2>
+ <ul>
+ <li>Técnico em Informática - EEEP Luiza de teodoro vieira</li>
+ <li>Curso de Lógica de Programação - EEEP Luiza de teodoro vieira</li>
+ <li>Curso de computação em nuvem - Huawei</li>
+ </ul>
+ </section>
+
+
+ <section id="habilidades" class="habilidades">
+ <h2>Habilidades</h2>
+ <ul>
+ <li>Montagem e manutenção de computadores</li>
+ <li>Redes e cabeamento</li>
+ <li>HTML, CSS e JavaScript</li>
+ <li>Git e GitHub</li>
+ <li>Atendimento ao usuário e suporte técnico</li>
+ </ul>
+ </section>
+
+
+ <section id="projetos" class="projetos-section">
+ <h2>Meus Projetos</h2>
+ <div class="projetos">
+ <div class="card" onclick="window.open('https://www.figma.com/design/uk7ejiZB40TVOdE2zU9ZSR/Untitled?t=9nmmVxDhrTbdhp9I-1')">
+ <h3>Design App DoeFácil</h3>
+ <p>Design de aplicação para smartphones (planta baixa)</p>
+ </div>
+ <div class="card" onclick="window.open('https://fitlifeimc.netlify.app', '_blank')">
+ <h3>Calculadora de IMC FitLife</h3>
+ <p>Calculadora interativa que mostra o índice de massa corporal do usuário e a classificação de acordo com o resultado.</p>
+ </div>
+ <div class="card" onclick="window.open('https://google.com', '_blank')">
+ <h3>Portfólio Pessoal</h3>
+ <p>Este site que você está vendo agora! Desenvolvido com foco em design responsivo, performance e uma boa apresentação.</p>
+ </div>
+ </div>
+</section>
+
+
+ <section id="contato" class="contato">
+ <h2>Contato</h2>
+ <p class="contato-info">Email: <a href="mailto:iarleycontato@gmail.com">iarleycontato@gmail.com</a></p>
+ <p class="contato-info">LinkedIn: <a href="https://www.linkedin.com/in/iarley-sales-381b8b333/">linkedin.com/in/iarley-sales-381b8b333</a></p>
+ <p class="contato-info">GitHub: <a href="https://github.com/iarleyg/iarleyg">github.com/iarleyg/iarleyg</a></p>
+ </section>
+
+
+ <footer>
+ <p>&copy; 2025 Iarley Gabriel. Todos os direitos reservados.</p>
+ </footer>
+ </div>
+</body>
+</html>
